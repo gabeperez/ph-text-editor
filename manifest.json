@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "PH Text Formatter",
+    "version": "1.0",
+    "description": "A text formatting toolbar for Product Hunt comments.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://www.producthunt.com/*"],
+        "js": ["phtext.js"]
+      }
+    ]
+  }
