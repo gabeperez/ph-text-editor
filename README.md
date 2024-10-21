@@ -1,7 +1,7 @@
 # PH Text Editor
 
 ## Description
-PH Text Formatter is a Chrome extension designed to enhance the commenting experience on Product Hunt. This extension provides a formatting toolbar for comments, allowing users to easily add bold, italic, strikethrough, links, and images to their text.
+PH Text Editor is a Chrome extension designed to enhance the commenting experience on Product Hunt. This extension provides a formatting toolbar for comments, allowing users to easily add bold, italic, strikethrough, links, and images to their text.
 
 ## Features
 - **Floating Toolbar:** A convenient formatting toolbar appears when focusing on comment boxes.
@@ -10,7 +10,7 @@ PH Text Formatter is a Chrome extension designed to enhance the commenting exper
 - **Image Insertion:** Add images to comments with custom URLs and alt text.
 
 ## Installation
-To install PH Text Formatter, follow these steps:
+To install PH Text Editor, follow these steps:
 
 1. **Download the Extension:**
    - Clone this repository or download the `phtext.js` and `manifest.json` files.
@@ -23,8 +23,8 @@ To install PH Text Formatter, follow these steps:
 ## Usage
 Once installed, navigate to any Product Hunt page. The extension will be active on all Product Hunt pages:
 - Click on any comment box to focus it.
-- The formatting toolbar will appear at the bottom right of the screen.
-- Select the text you want to format and click the appropriate button on the toolbar.
+- The formatting toolbar will appear at the top right of the text box.
+- Select the text you want to format and click the appropriate button on the toolbar or use Keyboard shortcuts CMD+B, CMD+I, CMD+K.
 - For links and images, you'll be prompted to enter the necessary information.
 
 ## Permissions
