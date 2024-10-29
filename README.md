@@ -9,6 +9,12 @@ PH Text Editor is a Chrome extension designed to enhance the commenting experien
 - **Link Insertion:** Quickly insert hyperlinks with custom URLs.
 - **Image Insertion:** Add images to comments with custom URLs and alt text.
 
+### Keyboard Shortcuts
+The following keyboard shortcuts are available:
+- **Bold:** ⌘+B (Mac) or Ctrl+B (Windows)
+- **Italic:** ⌘+I (Mac) or Ctrl+I (Windows)
+- **Link:** ⌘+K (Mac) or Ctrl+K (Windows)
+
 ## Installation
 To install PH Text Editor, follow these steps:
 
