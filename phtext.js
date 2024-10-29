@@ -59,9 +59,15 @@ function createToolbar() {
     btn.addEventListener('mouseout', () => {
       btn.style.backgroundColor = 'transparent';
     });
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent event bubbling
-      formatText(button.tag);
+    btn.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const activeTextarea = document.activeElement;
+      if (activeTextarea && activeTextarea.tagName === 'TEXTAREA') {
+        formatText(button.tag);
+        activeTextarea.focus();
+      }
     });
     toolbar.appendChild(btn);
   });
@@ -73,7 +79,7 @@ function createToolbar() {
 
 // Function to format selected text
 function formatText(tag) {
-  const textarea = document.querySelector('textarea[placeholder="What do you think?"]');
+  const textarea = getActiveTextarea();
   if (!textarea) return;
 
   const start = textarea.selectionStart;
@@ -130,7 +136,7 @@ function isVideoUrl(url) {
 function toggleToolbar(event) {
   if (!isProductHuntProductPage()) return;
 
-  const textarea = document.querySelector('textarea[placeholder="What do you think?"]');
+  const textarea = getActiveTextarea();
   if (!textarea) return;
 
   let toolbar = document.getElementById('ph-formatter-toolbar');
@@ -143,8 +149,8 @@ function toggleToolbar(event) {
     return;
   }
 
-  if (event.target === textarea) {
-    const rect = textarea.getBoundingClientRect();
+  if (event.target.tagName === 'TEXTAREA') {
+    const rect = event.target.getBoundingClientRect();
     toolbar.style.bottom = `${window.innerHeight - rect.top + 10}px`;
     toolbar.style.right = `${window.innerWidth - rect.right + 10}px`;
     toolbar.style.display = 'block';
@@ -157,7 +163,7 @@ function toggleToolbar(event) {
 function handleKeyboardShortcut(event) {
   if (!event.metaKey && !event.ctrlKey) return; // Only proceed if CMD (Mac) or CTRL (Windows) is pressed
 
-  const textarea = document.querySelector('textarea[placeholder="What do you think?"]');
+  const textarea = getActiveTextarea();
   if (!textarea) return;
 
   if (event.key === 'b') {
@@ -205,3 +211,16 @@ if (document.readyState === 'loading') {
 
 // Ensure the script runs even if it's injected after page load
 init();
+
+// Update the textarea selector to be more inclusive
+function getActiveTextarea() {
+  const activeElement = document.activeElement;
+  
+  // If the active element is a textarea, return it
+  if (activeElement && activeElement.tagName === 'TEXTAREA') {
+    return activeElement;
+  }
+  
+  // Only fall back to the main comment box if no textarea is focused
+  return document.querySelector('textarea[placeholder="What do you think?"]');
+}
