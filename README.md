@@ -1,7 +1,7 @@
 # PH Text Editor
 
 ## Description
-PH Text Editor is a Chrome extension designed to enhance the commenting experience on Product Hunt. This extension provides a formatting toolbar for comments, allowing users to easily add bold, italic, strikethrough, links, and images to their text.
+PH Text Editor is a Chrome extension designed to enhance the commenting experience on Product Hunt. This extension provides a formatting toolbar for comments, allowing users to easily add bold, italics, links, images, GIFs, and videos to their Product Hunt comments and replies.
 
 ## Features
 - **Floating Toolbar:** A convenient formatting toolbar appears when focusing on comment boxes.
