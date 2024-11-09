@@ -38,6 +38,7 @@ The extension requires the following permissions:
 - `activeTab`: To access the content of the current tab and insert formatted text into comment boxes.
 
 ## Editor in Action
+
 **TOOLBAR**
 <img width="562" alt="Screenshot 2024-10-29 at 22 54 57" src="https://github.com/user-attachments/assets/a13433ec-9fd7-4803-ae47-058b94a0f0e5">
 
