@@ -47,5 +47,14 @@ If you would like to contribute or modify the extension, you can edit the `phtex
 ## Customization
 To add or modify formatting options, edit the `buttons` array in the `createToolbar` function. Each button object should have `text`, `tag`, and `title` properties.
 
+**TOOLBAR**
+<img width="562" alt="Screenshot 2024-10-29 at 22 54 57" src="https://github.com/user-attachments/assets/a13433ec-9fd7-4803-ae47-058b94a0f0e5">
+
+**FORMATTING PRE-POST**
+<img width="984" alt="Screenshot 2024-10-29 at 22 55 55" src="https://github.com/user-attachments/assets/f812e73f-2756-4ff6-beb4-2cfdde241bcc">
+
+**POST WITH FORMATTING**
+![Screen Recording mov (2)](https://github.com/user-attachments/assets/e66466d3-d40c-49c8-a3c9-c2dc0f59c51e)
+
 ## License
 This project is licensed under the MIT License.
